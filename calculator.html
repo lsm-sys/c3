@@ -215,6 +215,14 @@
                 max-width: 400px;
             }
 
+            .calculator {
+                order: 1;
+            }
+
+            .history {
+                order: 2;
+            }
+
             .calculator,
             .history {
                 max-width: 100%;
@@ -368,6 +376,16 @@
 </head>
 <body>
     <div class="app">
+        <aside class="history">
+            <div class="history-header">
+                <h2 class="history-title">Журнал</h2>
+                <button class="history-clear" id="clearHistory" type="button" title="Очистить журнал">Очистить</button>
+            </div>
+            <div class="history-list" id="historyList">
+                <p class="history-empty" id="historyEmpty">Пока нет операций</p>
+            </div>
+        </aside>
+
         <div class="calculator">
             <div class="calculator-header">
                 <button class="theme-toggle" id="themeToggle" type="button" aria-label="Переключить на тёмную тему" title="Переключить тему">
@@ -404,16 +422,6 @@
                 <button onclick="appendDecimal()">.</button>
             </div>
         </div>
-
-        <aside class="history">
-            <div class="history-header">
-                <h2 class="history-title">Журнал</h2>
-                <button class="history-clear" id="clearHistory" type="button" title="Очистить журнал">Очистить</button>
-            </div>
-            <div class="history-list" id="historyList">
-                <p class="history-empty" id="historyEmpty">Пока нет операций</p>
-            </div>
-        </aside>
     </div>
 
     <script>
